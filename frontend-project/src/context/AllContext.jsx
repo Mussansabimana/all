@@ -114,7 +114,6 @@ const DataProvider = ({ children }) => {
     setLoading(prev => ({ ...prev, departments: true }));
     try {
       const response = await getAllDepartments();
-      console.log(response.data.data);
       if (response.data.status) {
         setDepartments(response.data.data);
       }
@@ -147,7 +146,7 @@ const DataProvider = ({ children }) => {
       const response = await axios.get('http://localhost:2025/api/reports', {
         withCredentials: true
       });
-      return console.log(response.data.data);
+
       if (response.data.status) {
         setReports(response.data.data);
       }

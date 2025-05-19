@@ -54,7 +54,7 @@ const App = () => {
               path="/" 
               element={
                 <ProtectedRoute>
-                  <Navigate to="/dashboard" replace />
+                  <Navigate to="/dashboard/all-employees" replace />
                 </ProtectedRoute>
               } 
             />
@@ -78,7 +78,7 @@ const App = () => {
               <Route path="all-employees" element={<AllEmployees />} />
               <Route path="all-departments" element={<AllDepartments />} />
               <Route path="all-salaries" element={<AllSalaries />} />
-              <Route path="update-salary" element={<UpdateSalary />} />
+              <Route path="update-salary/:id" element={<UpdateSalary />} />
               <Route path="all-reports" element={<AllReports />} />
               <Route path="*" element={<Navigate to="all-employees" replace />} />
             </Route>

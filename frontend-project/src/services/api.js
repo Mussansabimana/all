@@ -33,5 +33,6 @@ export const getAllEmployees = () => api.get('/employees');
 export const getAllDepartments = () => api.get('/departments');
 export const getAllSalaries = () => api.get('/salaries');
 export const addEmployee = (employeeData) => api.post('/employees', employeeData);
+export const updateSalary = (salaryData) => api.put('/salaries/update', salaryData);
 
 export { api };

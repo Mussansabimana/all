@@ -30,7 +30,7 @@ const Nav = () => {
             <Link to="/dashboard/all-salaries" className="text-white hover:text-pink-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
               All Salaries
             </Link>
-            <Link to="/dashboard/reports" className="text-white hover:text-pink-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
+            <Link to="/dashboard/all-reports" className="text-white hover:text-pink-200 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200">
               Reports
             </Link>
             <button

@@ -1,12 +1,16 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useCallback } from 'react';
 import { useData } from '../context/AllContext';
 
 const AllReports = () => {
   const { reports, loading, fetchReports } = useData();
 
-  useEffect(() => {
+  const loadReports = useCallback(() => {
     fetchReports();
   }, [fetchReports]);
+
+  useEffect(() => {
+    loadReports();
+  }, [loadReports]);
 
   if (loading.reports) {
     return (
@@ -32,7 +36,7 @@ const AllReports = () => {
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white drop-shadow-lg">
           All Reports
         </h2>
-        {reports.length === 0 ? (
+        {!reports || reports.length === 0 ? (
           <div className="bg-white/10 backdrop-blur-md rounded-lg p-6 text-center shadow-xl">
             <p className="text-white text-lg">No reports found. Please add some reports to the system.</p>
           </div>
